@@ -1,0 +1,54 @@
+#test{
+    border-style: solid;
+    border-color: black;
+    border-radius: 3px;
+    background-color: violet;
+}
+table,
+td {
+    border: 1px solid black;
+}
+
+td {
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul.a {
+    list-style-type: circle;
+}
+
+ul.b {
+    list-style-type: disc;
+}
+
+ul.c {
+    list-style-type: square;
+}
+
+ol.d {
+    list-style-type: upper-roman;
+}
+
+ol.e {
+    list-style-type: lower-roman;
+}
+
+ol.f {
+    list-style-type: lower-alpha;
+}
+
+ol.g {
+    list-style-type: decimal;
+}
+.tytul{
+    background-color: white;
+}
+* {
+    background-color: lightgrey;
+}

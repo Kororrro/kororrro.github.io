@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bitnami.css">
+</head>
+<body>
+<!-- komentarz -->
+    <header style="display: flex;">
+        <h1 style="color: red; ">!</h1>
+        <p style="margin-top: 22px;">
+            Ten plik jest w formacie html. 
+            Plik php nie mógłby być otworzony w firefoxie
+            bez wcześniejszego wrzucenia go do hostingu tj. XAMPP
+        </p>
+        
+    </header>
+    <hr>
+    <h1 class="tytul">Znaczniki podstawowe</h1>
+    <hr>
+    <h1>h1</h1>
+    <h6>h2</h6>
+    <p id="test">parag</p>
+    <b>bold</b>
+    <strong>strong</strong> <br>
+    <s>strikethrough</s>
+    <del>znacznik del</del> <br>
+    <i>italian</i>
+    <em>znacznik em</em> <br>
+    <u>znacznik u</u>
+    <ins>znacznik ins</ins> <br>
+    <sub>znacznik sub</sub>
+    <sup>znacznik sup</sup>
+    <p>Akapit z indeksem <sub>dolnym</sub> i <sup>górnym</sup></p>
+
+    <hr>
+    <h3 class="tytul">Listy</h3>
+
+    <ol>
+        <li>ordered list 1</li>
+        <ul>
+            <li>unordered list under ordered list</li>
+        </ul>
+        <li>ordered list 2</li>
+        <ol type="1"><li>listy typ 1</li></ol>
+        <ol type="A"><li>listy typ A</li></ol>
+        <ol type="a"><li>Listy typ a</li></ol>
+        <ol type="I"><li>Listy typ I</li></ol>
+        <ol type="i"><li>Listy typ I</li></ol>
+
+    </ol>
+
+    <hr>
+    <h2 class="tytul">Tablice</h3>
+    <h3 class="tytul">Tablica 1.</h3>
+
+    <table id="test">
+        <tr>
+            <th colspan="2">Dane osobowe</th>
+        </tr>
+        <tr>
+            <td>Imię</td>
+            <td>Jan</td>
+        </tr>
+        <tr>
+            <td>Nazwisko</td>
+            <td>Kowalski</td>
+        </tr>
+    </table>
+
+    <a href="">
+        <img src="" alt="">
+    </a>
+
+    <p>atrybuty target:
+        _self, _blank,
+        _parent, _top
+    </p>
+    <p>atrybut download</p>
+    adresy url: absolutny i relatywny
+
+    <a href="#id">Idź do danego id</a>
+    
+    <hr>
+    <h1 class="tytul">Formularze</h1>
+    <h3>Formularz - hasło</h3>
+    <form action="" method="get">
+        <input type="password">
+        <input type="submit" value="Wyślij">
+    </form>
+
+    <h3>Formularz - suwak, checkbox</h3>
+    <form action="" method="get">
+        <input type="range">
+        <input id="x" type="checkbox">
+        <input type="submit" value="Wyślij">
+        <p id="wynik"></p>
+    </form>
+
+    <h3>Formularz - suwak w zakresie liczb</h3>
+    <form action="" method="get">
+        <input type="range" id="suwak" min="8" max="100" value="0" name="" step="10">
+        <p id="wynik2"></p>
+    </form>
+
+    <h3>Formularz - idk</h3>
+    <form action="" method="get">
+        <label for="pole">Wpisz tekst: </label>
+        <input type="text" name="" id="inputform4">
+    </form>
+    
+    <hr>
+    <h2>Fieldset</h3>
+    <fieldset>
+        <legend>Dane osobowe</legend>
+        <!-- Atrybut w input name jest przeznaczony do 
+        wykorzystania w skryptach php  -->
+        <label for="imie">Imię: </label>
+        <input type="text">
+        <br>
+        <label for="nazwisko">Nazwisko: </label>
+        <input type="text">
+    </fieldset>
+    
+    <hr><h2>Select</h2>
+    <select name="liczba" id="">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+</body>
+<script>
+   let suwak = document.querySelector("#suwak");
+   let wynik = document.querySelector("#wynik2")
+   suwak.addEventListener("input", () => (
+    wynik.innerHTML = suwak.value
+   ));
+</script>
+</html>
