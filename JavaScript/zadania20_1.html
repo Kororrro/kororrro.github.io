@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input type='checkbox' onclick="toggleCheckbox()" id='el1'/> 
+
+   <p id='el2'></p>
+
+   <script>   
+    let checkbox = document.querySelector("#el1")
+    let parag = document.querySelector("#el2")
+    function toggleCheckbox(){
+
+        if (checkbox.checked){
+            parag.innerHTML = "OFF"
+        }else{
+            parag.innerHTML = "ON"
+        }
+    }
+
+   </script>
+</body>
+</html>

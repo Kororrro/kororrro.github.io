@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="ABC">Node.js</p>
+    <p>Node.js</p>
+    <p>Node.js</p>
+    <p>Node.js</p>
+
+    <input id="li1" type="number">
+    <button type="button" onclick="yes()">Change text</button>
+    <script>
+        function yes(){
+            ABC.innerHTML = 'OKOKOKOK';
+            //obiekt_p = document.getElementById("ABC")
+            let i1 = parseInt(li1.value)
+            obiekt_p = document.querySelectorAll('p')
+            // console.log(obiekt_p)
+            obiekt_p.forEach(elem => {
+                elem.innerHTML = `input: ${i1}`
+            });
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="test">Adam</h1>
+    <h1>Basia</h1>
+    <h1>Gosia</h1>
+    <script>
+        element = document.querySelectorAll('p')
+        // for (el of element) {
+        //     el.innerHTML = `dzien dobry ${Math.random()}`
+        // }
+        element.forEach(function (elem) {
+            elem.innerHTML = Math.random()
+        });
+        // function wypisz(a,b) {
+        //     console.log(a*b)
+        // }
+        // function uruchom(cos){
+        //     cos(100,200)
+        // }
+        // uruchom(function (a,b) {
+        //     console.log(`${a}+${b}=${a+b}`)
+        // })
+        // wyn = function (a,b) {
+        //     console.log(`${a}+${b}=${a+b}`)
+        // }
+        wyn2 = (a,b) => console.log(`${a}/${b}=${a/b}`)
+    </script>
+    <script>
+        dd = document.querySelectorAll('h1')
+
+        // for (elem of dd) {
+        //     elem.onclick = klik;
+        // }
+
+        dd.forEach(elem => {
+            elem.onclick = klik
+            elem.style.color = "red"
+            elem.licznik = 0
+            elem.pierw_tekst = elem.innerHTML
+        })
+        document.querySelector('#test').style.color = "yellow"
+
+        function klik(event) {
+            console.log(event)
+            elem = event.target
+            elem.licznik++
+            elem.innerHTML = `${elem.pierw_tekst} ${elem.licznik}`
+            // if (elem.style.color == "red" || elem.style.color =="black"){
+            //     if (elem.style.color == "red") {
+            //         elem.style.color = "black"
+            //     } else {
+            //         elem.style.color = "red"
+            //     }
+            // }else{
+            //     return console.error("Wrong color on target");
+            // }
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section>
+            <p>Od</p>
+            <input type="number" id="l1">
+            <p>Do</p>
+            <input type="number" id="l2">
+            <button id="przycisk">generuj</button>
+        </section>
+        <section id="sekcja">
+
+        </section>
+        <script>
+            przycisk.onclick = () => {
+                l1 = parseInt( document.querySelector("#l1").value)
+                l2 = parseInt( document.querySelector("#l2").value)
+                sekcja = document.querySelector("#sekcja")
+                let tekst = ""
+                for (let i = l1; i <= l2; i++) {
+                    tekst += `<h1>${i}</h1>`
+                    console.log("pętla")
+                }
+                sekcja.innerHTML = tekst
+            }
+            
+        </script>
+    </main>
+</body>
+</html>

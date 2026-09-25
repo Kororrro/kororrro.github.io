@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>super klikacz</h1>
+    <input id="ilerazy"/>
+    <button id="butt">Dodaj</button>
+
+    <script>
+        butt.onclick = ()=>{
+            n=parseInt(ilerazy.value)
+            for (let i = 0; i < n; i++) {
+                wynik.innerHTML += `<h1>${Math.random()}</h1>`
+            }
+            
+            dd = document.querySelectorAll('section#wynik h1')
+            dd.forEach(element => { // parameter => function body
+                element.onclick = (event)=>{ // param => {func body}
+                    event.target.innerHTML = Math.random()
+                }
+            });
+            
+        }
+    </script>
+
+    <section id="wynik">
+
+    </section>
+</body>
+</html>

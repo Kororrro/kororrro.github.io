@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <button onclick="togglecheckbox()">Reverse</button>
+
+    <script>
+        function togglecheckbox(){
+            let elems = document.querySelectorAll("input[type='checkbox']")
+            elems.forEach(element => {
+                if(element.checked){
+                    element.checked = false
+                }else{
+                    element.checked = true
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

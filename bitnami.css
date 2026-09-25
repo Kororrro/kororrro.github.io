@@ -47,8 +47,11 @@ ol.g {
     list-style-type: decimal;
 }
 .tytul{
-    background-color: white;
+    background-color: lightgrey;
+    color: black;
+    padding: 15px;
 }
 * {
-    background-color: lightgrey;
+    background-color: #333333;
+    color: white;
 }

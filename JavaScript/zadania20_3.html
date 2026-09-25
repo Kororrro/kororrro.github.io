@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type='checkbox' id='parzyste'/> <br> 
+    <input id='liczba1'/> <br>
+    <button onclick="wypisz()">Wypisz</button> <br>
+    <p id="wynik"></p>
+    <script>
+        function wypisz(){
+            let val = document.querySelector("#liczba1").value
+            let checkbox = document.querySelector("#parzyste")
+            let parag = document.querySelector("#wynik")
+            parag.innerHTML = ""
+            for(i = 1; i<=val;i++){
+                if(checkbox.checked){
+                    if(i % 2 == 0){
+                        parag.innerHTML += `${i}\n`
+                    }else{
+                        continue
+                    }
+                }else{
+                    if(i % 2 == 0){
+                        continue
+                    }else{
+                        parag.innerHTML += `${i}\n`
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
