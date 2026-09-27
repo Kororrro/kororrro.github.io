@@ -55,3 +55,13 @@ ol.g {
     background-color: #333333;
     color: white;
 }
+
+main{
+    display: flex;
+}
+aside{
+    width: 30%;
+}
+section{
+    width: 70%;
+}
