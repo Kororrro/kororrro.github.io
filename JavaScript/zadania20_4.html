@@ -4,30 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../bitnami.css">
 </head>
 <body>
-    <input type='checkbox' id='el1' class='c'/>
-    <input type='checkbox' id='el2' class='c'/>
-    <input type='checkbox' id='el3' class='c'/> <br>
-    <button onclick="wypisz()">Wypisz</button>
-    <pre id="wynik"></pre>
-    <script>
-        function wypisz(){
-            let checkbox = document.querySelectorAll("input.c")
-            let parag = document.querySelector("#wynik")
-            parag.innerHTML = ""
-            let turnoff = 0;
-            let turnon = 0;
+    <main>
+        <section>
 
-            checkbox.forEach(element => {
-                if(element.checked){
-                    turnon += 1
-                }else{
-                    turnoff += 1
+            <input type='checkbox' id='el1' class='c'/>
+            <input type='checkbox' id='el2' class='c'/>
+            <input type='checkbox' id='el3' class='c'/> <br>
+            <button onclick="wypisz()">Wypisz</button>
+            <pre id="wynik"></pre>
+            <script>
+                function wypisz(){
+                    let checkbox = document.querySelectorAll("input.c")
+                    let parag = document.querySelector("#wynik")
+                    parag.innerHTML = ""
+                    let turnoff = 0;
+                    let turnon = 0;
+                    
+                    checkbox.forEach(element => {
+                        if(element.checked){
+                            turnon += 1
+                        }else{
+                            turnoff += 1
+                        }
+                    });
+                    parag.innerHTML = `Włączone checkboxy: ${turnon}\nWyłączone checkboxy: ${turnoff}`
                 }
-            });
-            parag.innerHTML = `Włączone checkboxy: ${turnon}\nWyłączone checkboxy: ${turnoff}`
-        }
-    </script>
+            </script>
+        </section>
+        <aside>
+            <a href="../index.html">Powrót</a>
+        </aside>
+    </main>
 </body>
 </html>

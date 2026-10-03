@@ -4,25 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../bitnami.css">
 </head>
 <body>
-    <input type="checkbox">
-    <input type="checkbox">
-    <input type="checkbox">
-    <button onclick="togglecheckbox()">Reverse</button>
+    <main>
+        <section>
+            <input type="checkbox">
+            <input type="checkbox">
+            <input type="checkbox">
+            <button onclick="togglecheckbox()">Reverse</button>
 
-    <script>
-        function togglecheckbox(){
-            let elems = document.querySelectorAll("input[type='checkbox']")
-            elems.forEach(element => {
-                if(element.checked){
-                    element.checked = false
-                }else{
-                    element.checked = true
+            <script>
+                function togglecheckbox() {
+                    let elems = document.querySelectorAll("input[type='checkbox']")
+                    elems.forEach(element => {
+                        if (element.checked) {
+                            element.checked = false
+                        } else {
+                            element.checked = true
+                        }
+                    });
                 }
-            });
-        }
-    </script>
+            </script>
+        </section>
+        <aside>
+            <a href="../index.html">Powrót</a>
+        </aside>
+    </main>
 
 </body>
 </html>

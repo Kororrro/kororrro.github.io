@@ -4,27 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../bitnami.css">
 </head>
 <body>
-    <p id="ABC">Node.js</p>
-    <p>Node.js</p>
-    <p>Node.js</p>
-    <p>Node.js</p>
+    <header>
+        <h1>Podmiana tekstu w JS</h1>
+    </header>
+    <main>
+        <section>
 
-    <input id="li1" type="number">
-    <button type="button" onclick="yes()">Change text</button>
-    <script>
-        function yes(){
-            ABC.innerHTML = 'OKOKOKOK';
-            //obiekt_p = document.getElementById("ABC")
-            let i1 = parseInt(li1.value)
-            obiekt_p = document.querySelectorAll('p')
-            // console.log(obiekt_p)
-            obiekt_p.forEach(elem => {
-                elem.innerHTML = `input: ${i1}`
-            });
-
-        }
-    </script>
+            <p id="ABC">Node.js</p>
+            <p>Node.js</p>
+            <p>Node.js</p>
+            <p>Node.js</p>
+            
+            <input id="li1" type="number">
+            <button type="button" onclick="yes()">Change text</button>
+            <script>
+                function yes(){
+                    ABC.innerHTML = 'OKOKOKOK';
+                    //obiekt_p = document.getElementById("ABC")
+                    let i1 = parseInt(li1.value)
+                    obiekt_p = document.querySelectorAll('p')
+                    // console.log(obiekt_p)
+                    obiekt_p.forEach(elem => {
+                        elem.innerHTML = `input: ${i1}`
+                    });
+                    
+                }
+                </script>
+        </section>
+        <aside>
+            <a href="../index.html">Powrót</a>
+        </aside>
+    </main>
 </body>
 </html>

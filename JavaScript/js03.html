@@ -4,31 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../bitnami.css">
 </head>
 <body>
-    <h1>super klikacz</h1>
-    <input id="ilerazy"/>
-    <button id="butt">Dodaj</button>
-
-    <script>
-        butt.onclick = ()=>{
-            n=parseInt(ilerazy.value)
-            for (let i = 0; i < n; i++) {
-                wynik.innerHTML += `<h1>${Math.random()}</h1>`
-            }
+    <main>
+        <section>
+            <h1>super klikacz</h1>
+            <input id="ilerazy"/>
+            <button id="butt">Dodaj</button>
             
-            dd = document.querySelectorAll('section#wynik h1')
-            dd.forEach(element => { // parameter => function body
-                element.onclick = (event)=>{ // param => {func body}
-                    event.target.innerHTML = Math.random()
+            <script>
+                butt.onclick = ()=>{
+                    n=parseInt(ilerazy.value)
+                    for (let i = 0; i < n; i++) {
+                        wynik.innerHTML += `<h1>${Math.random()}</h1>`
+                    }
+                    
+                    dd = document.querySelectorAll('section#wynik h1')
+                    dd.forEach(element => { // parameter => function body
+                        element.onclick = (event)=>{ // param => {func body}
+                            event.target.innerHTML = Math.random()
+                        }
+                    });
+                    
                 }
-            });
-            
-        }
-    </script>
-
-    <section id="wynik">
-
-    </section>
+                </script>
+        <section id="wynik">
+        </section>
+        </section>
+        <aside>
+            <a href="../index.html">Powrót</a>
+        </aside>
+    </main>
 </body>
 </html>
